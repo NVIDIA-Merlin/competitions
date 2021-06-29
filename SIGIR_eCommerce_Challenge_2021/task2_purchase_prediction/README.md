@@ -88,10 +88,10 @@ The table below shows the general statistics for certain features based on the p
  <tr><th>Features</th><td>Is_purchased = 0</td><td>Is_purchased = 1</td><td>Is_purchased = 0</td><td>Is_purchased = 1</td><td>Is_purchased = 0</td><td>Is_purchased = 1</td></tr>
  <tr><td>nb_after_add</td><td>(4.72, 4.00, 3.78)</td><td>(5.92, 6.00, 3.31)</td><td>(4.49, 4.00, 3.72)</td><td>(5.75, 6.00, 3.30)</td><td>(1.89, 0.00, 2.83)</td><td>(2.42, 2.00, 3.05)</td></tr>
  <tr><td>position of the add event</td><td>(5.18, 3.00, 5.78)</td><td>(5.21, 4.00, 5.22)</td><td>(4.83, 3.00, 5.44)</td><td>(5.04, 4.00, 5.00)</td><td>(4.87, 3.00, 5.36)</td><td>(5.04, 4.00, 5.00)</td></tr>
- <tr><td>nb_of_add_events</td><td>(1.34, 1.00, 0.98)</td><td>(1.32, 1.00, 0.88)</td><td>(1.34, 1.00, 0.97)</td><td>(1.34, 1.00, 0.91)</td><td>(0.22, 0.00, 0.58)</td><td>(0.21, 00, 0.57)</td></tr>
- <tr><td>nb of different categories</td><td>(1.47, 1.00, 0.99)</td><td>(1.36, 1.00, 0.84)</td><td>(1.41, 1.00, 0.90)</td><td>(1.33, 1.00, 0.82)</td><td>(0.71, 1.00, 0.69)</td><td>(0.56, 0.00, 0.624)</td></tr>
- <tr><td>nb of different main categories</td><td>(1.17, 1.00, 0.44)</td><td>(1.13, 1.00, 0.38)</td><td>(1.15, 1.00, 0.42)</td><td>(1.12, 1.00, 0.37)</td><td>-</td><td>-</td></tr>
- <tr><td>nb of clicks</td><td>(0.22, 0.00, 0.84)</td><td>(0.29, 0.00, 0.87)</td><td>(0.25, 0.00, 0.89)</td><td>(0.34, 0.00, 1.01)</td><td>(0.14, 0.00, 0.62)</td><td>(0.15, 0.00, 0.63)</td></tr>
+ <tr><td>nb_of_add_events</td><td>(1.34, 1.00, 0.98)</td><td>(1.32, 1.00, 0.88)</td><td>(1.34, 1.00, 0.97)</td><td>(1.34, 1.00, 0.91)</td><td>(1.22, 1.00, 0.58)</td><td>(1.21, 1.00, 0.57)</td></tr>
+ <tr><td>nb of different categories</td><td>(1.47, 1.00, 0.99)</td><td>(1.36, 1.00, 0.84)</td><td>(1.41, 1.00, 0.90)</td><td>(1.33, 1.00, 0.82)</td><td>(1.30, 1.00, 0.66)</td><td>(1.22, 1.00, 0.55)</td></tr>
+ <tr><td>nb of different main categories</td><td>(1.17, 1.00, 0.44)</td><td>(1.13, 1.00, 0.38)</td><td>(1.15, 1.00, 0.42)</td><td>(1.12, 1.00, 0.37)</td><td>(1.12, 1.00, 0.35)</td><td>(1.08, 1.00, 0.29)</td></tr>
+ <tr><td>nb of clicks</td><td>(0.22, 0.00, 0.84)</td><td>(0.29, 0.00, 0.87)</td><td>(0.25, 0.00, 0.89)</td><td>(0.34, 0.00, 1.01)</td><td>(0.23, 0.00, 0.77)</td><td>(0.30, 0.00, 0.81)</td></tr>
  <tr><td>nb_queries</td><td>(0.47, 0.00, 1.19)</td><td>(0.64, 0.00, 1.27)</td><td>(0.46, 0.00, 1.16)</td><td>(0.64, 0.00, 1.36)</td><td>(0.46, 0.00, 1.16)</td><td>(0.64, 0.00, 1.36)</td></tr>
  <tr><td>nb of samples</td><td>136462</td><td>38111</td><td>32084</td><td>7928</td><td>32084</td><td>7928</td></tr>
 </tbody></table>
