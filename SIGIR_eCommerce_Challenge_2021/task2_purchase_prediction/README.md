@@ -48,7 +48,7 @@ The distribution of sessions with respect to the number of actions recorded afte
 * `Duplicated sessions with different cuts after (AC)`:  We duplicated each session in Train and Validation by truncating it at different points in [0, 2, 4, 6, 8, 10] events after AC.
 
 <p align="center">
-  <img src="https://github.com/rapidsai/recsys/blob/main/competitions/sigir_ecom_challenge_2021/images/resampling_strategies.png" width="800" height="600"/>
+  <img src="https://github.com/NVIDIA-Merlin/competitions/blob/main/SIGIR_eCommerce_Challenge_2021/task2_purchase_prediction/images/resampling_strategies.png" width="800" height="600"/>
   <br>
   <font size="1">Figure 1. Distrbution of sessions with respect to number of interactions after the (AC) event.</font>
 </p>
@@ -61,23 +61,29 @@ EDA is always an important part of any ML/DL pipeline. For initial EDA about the
 Figure 2. shows that sessions with purchase or cart-abandonment have the same length distributions meaning that total number of unique interactions is not enough to predict the user's intention to purchase the first add-to-cart (AC) product. To get a more fine-grained relation between the purchase intention and the number of unique interactions, we plot in Figure 3. the distribution of interactions length before and after the AC event for both classes. From this figure, we could notice that there are more interactions after the AC than before for sessions with a purchase event. While there is an equal distribution of the number of interations before and after the AC for cart-abandonment sessions. As the objective of the competition is to detect early predictions using the 5 subgroups of `nb_after_add` events considered after the first add-to-cart action, we plot in Figure 4. the distribution of the binary classes within each subgroup. Following the conclusion of Figure 3. we observe that sessions with larger `nb_after_add` contains more purchase sessions.   
 
 <p align="center">
-  <img src="https://github.com/rapidsai/recsys/blob/main/competitions/sigir_ecom_challenge_2021/images/train_session_length_dist.png" width="600" height="300" />
+  <img src="https://github.com/NVIDIA-Merlin/competitions/blob/main/SIGIR_eCommerce_Challenge_2021/task2_purchase_prediction/images/train_session_length_dist.png" width="600" height="300" />
   <br>
   <font size="1">Figure 2. Train set session length distribution based on purchased label</font>
 </p>
 
 <p align="center">
- <img src="https://github.com/rapidsai/recsys/blob/main/competitions/sigir_ecom_challenge_2021/images/distribution%20of%20actions%20before%20after%20AC.png" width="600" height="400">
+ <img src="https://github.com/NVIDIA-Merlin/competitions/blob/main/SIGIR_eCommerce_Challenge_2021/task2_purchase_prediction/images/dist_actions_before_after_AC.png" width="600" height="400">
   <br>
   <font size="1">Figure 3. Distribution of number of interactions before and after first AC event.</font>
 </p>
 
 <p align="center">
- <img src="https://github.com/rapidsai/recsys/blob/main/competitions/sigir_ecom_challenge_2021/images/nb_after_add_train.png" width="600" height="300">
+ <img src="https://github.com/NVIDIA-Merlin/competitions/blob/main/SIGIR_eCommerce_Challenge_2021/task2_purchase_prediction/images/nb_after_add_train.png" width="600" height="300">
   <br>
-  <font size="1">Figure 4. Nb after add for train with respect to purchase label.</font>
+  <font size="1">Figure 4a. Nb after add for train with respect to purchase label.</font>
 </p>
 
+
+<p align="center">
+ <img src="https://github.com/NVIDIA-Merlin/competitions/blob/main/SIGIR_eCommerce_Challenge_2021/task2_purchase_prediction/images/nb_after_add_train_test.png" width="600" height="300">
+  <br>
+  <font size="1">Figure 4b. Nb after add for train and test sets.</font>
+</p>
 
 
 The table below shows the general statistics for certain features based on the preprocessed session interactions train and validation datasets. 
@@ -88,7 +94,7 @@ The table below shows the general statistics for certain features based on the p
 <thead><tr class="table-firstrow"><th>&nbsp;</th><th colspan=2>Train set</th><th colspan=2>Validation set</th><th colspan=2>Validation set resampled</th></tr></thead><tbody>
  <tr><th>Features</th><td>Is_purchased = 0</td><td>Is_purchased = 1</td><td>Is_purchased = 0</td><td>Is_purchased = 1</td><td>Is_purchased = 0</td><td>Is_purchased = 1</td></tr>
  <tr><td>nb_after_add</td><td>(4.72, 4.00, 3.78)</td><td>(5.92, 6.00, 3.31)</td><td>(4.49, 4.00, 3.72)</td><td>(5.75, 6.00, 3.30)</td><td>(1.89, 0.00, 2.83)</td><td>(2.42, 2.00, 3.05)</td></tr>
- <tr><td>position of the add event</td><td>(5.18, 3.00, 5.78)</td><td>(5.21, 4.00, 5.22)</td><td>(4.83, 3.00, 5.44)</td><td>(5.04, 4.00, 5.00)</td><td>-</td><td>-</td></tr>
+ <tr><td>position of the add event</td><td>(5.18, 3.00, 5.78)</td><td>(5.21, 4.00, 5.22)</td><td>(4.83, 3.00, 5.44)</td><td>(5.04, 4.00, 5.00)</td><td>(4.87, 3.00, 5.36)</td><td>(5.04, 4.00, 5.00)</td></tr>
  <tr><td>nb_of_add_events</td><td>(1.34, 1.00, 0.98)</td><td>(1.32, 1.00, 0.88)</td><td>(1.34, 1.00, 0.97)</td><td>(1.34, 1.00, 0.91)</td><td>(0.22, 0.00, 0.58)</td><td>(0.21, 00, 0.57)</td></tr>
  <tr><td>nb of different categories</td><td>(1.47, 1.00, 0.99)</td><td>(1.36, 1.00, 0.84)</td><td>(1.41, 1.00, 0.90)</td><td>(1.33, 1.00, 0.82)</td><td>(0.71, 1.00, 0.69)</td><td>(0.56, 0.00, 0.624)</td></tr>
  <tr><td>nb of different main categories</td><td>(1.17, 1.00, 0.44)</td><td>(1.13, 1.00, 0.38)</td><td>(1.15, 1.00, 0.42)</td><td>(1.12, 1.00, 0.37)</td><td>-</td><td>-</td></tr>
@@ -253,7 +259,7 @@ The results below are from the best single XGB model that scored 3.6347387968362
 The Figure 5 shows the subset of relevant features selected using random swapping and their relative importance given by the XGB model. We notice that interactions happening after the AC event are the most important to predict cart-abandonment. Another set of features relevant to the prediction is the interactions the user had with the AC product. 
 
 <p align="center">
-  <img src="https://github.com/rapidsai/recsys/blob/main/competitions/sigir_ecom_challenge_2021/images/importance_of_selected_features.png" width="600" height="300" />
+  <img src="https://github.com/NVIDIA-Merlin/competitions/blob/main/SIGIR_eCommerce_Challenge_2021/task2_purchase_prediction/images/importance_of_selected_features.png" width="600" height="300" />
   <br>
   <font size="1">Figure 5. Importance of the features selected via feature swapping.</font>
 </p>
@@ -264,10 +270,10 @@ The Figure 5 shows the subset of relevant features selected using random swappin
 In the upper-left plot of Figure 6, we visualize the micro f1_score for each group of `nb_after_add`. The highest accuracy score is achieved for sessions with 0 or one event after the add to cart (AC) while the accuracy stabilizes for groups of 2, 4, 6 and 8 interactions after the AC event and drops sharply for sessions with more than 10 interactions after the AC. To better understand these scores, we plot in the upper-right figure the f1-score of positive and negative classes for each subgroup. For `nb_after_add==0` the model has a very high classification score for the negative class but fails to detect the purchase events. This discrepancy between both classes is not showcased in the micro f1_score as the positive class is only representing 6% of the subgroup sessions (see Figure 4.). For `nb_after_add==10`, we got a higher score of positive classes but as they occur more often in the subgroup 10, the micro f1_score is lower than for `nb_after_add==0`.  From these two plots, we can conclude that the model is able to distinguish between purchase and cart-abandonment for sessions with 2 or 9 actions after the AC event. However, it is much harder to predict the purchase intention either for sessions without any information after the add-to-cart or for the ones with longer interactions after the AC.  Given the difference in class distribution and model’s scores between the 6 subgroups, we trained 6 XGB models, with the parameters of the best XGB reported in Table 3, one for each subgroup. The LB score improves significantly from `3.63473879683627` to <b>`3.6363084325068`</b> suggesting that each group should be trained separately to learn its specificities.
 
 <p align="left">
-  <img src="https://github.com/rapidsai/recsys/blob/main/competitions/sigir_ecom_challenge_2021/images/weighted_f1_nb_after_add.png" width="400" height="300" />
-  <img src="https://github.com/rapidsai/recsys/blob/main/competitions/sigir_ecom_challenge_2021/images/pos_neg_f1_score.png" width="400" height="300" />
-  <img src="https://github.com/rapidsai/recsys/blob/main/competitions/sigir_ecom_challenge_2021/images/wighted_f1_unique_interactions.png" width="400" height="300" />
-  <img src="https://github.com/rapidsai/recsys/blob/main/competitions/sigir_ecom_challenge_2021/images/weighted_f1_add_interactions.png" width="400" height="300" />
+  <img src="https://github.com/NVIDIA-Merlin/competitions/blob/main/SIGIR_eCommerce_Challenge_2021/task2_purchase_prediction/images/weighted_f1_nb_after_add.png" width="400" height="300" />
+  <img src="https://github.com/NVIDIA-Merlin/competitions/blob/main/SIGIR_eCommerce_Challenge_2021/task2_purchase_prediction/images/pos_neg_f1_score.png" width="400" height="300" />
+  <img src="https://github.com/NVIDIA-Merlin/competitions/blob/main/SIGIR_eCommerce_Challenge_2021/task2_purchase_prediction/images/wighted_f1_unique_interactions.png" width="400" height="300" />
+  <img src="https://github.com/NVIDIA-Merlin/competitions/blob/main/SIGIR_eCommerce_Challenge_2021/task2_purchase_prediction/images/wighted_f1_unique_interactions.png" width="400" height="300" />
     <br>
   <font size="1">Figure 6. Prediction analysis of the best single XGB model. </font>
 </p>
