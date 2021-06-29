@@ -75,14 +75,7 @@ Figure 2. shows that sessions with purchase or cart-abandonment have the same le
 <p align="center">
  <img src="https://github.com/NVIDIA-Merlin/competitions/blob/main/SIGIR_eCommerce_Challenge_2021/task2_purchase_prediction/images/nb_after_add_train.png" width="600" height="300">
   <br>
-  <font size="1">Figure 4a. Nb after add for train with respect to purchase label.</font>
-</p>
-
-
-<p align="center">
- <img src="https://github.com/NVIDIA-Merlin/competitions/blob/main/SIGIR_eCommerce_Challenge_2021/task2_purchase_prediction/images/nb_after_add_train_test.png" width="600" height="300">
-  <br>
-  <font size="1">Figure 4b. Nb after add for train and test sets.</font>
+  <font size="1">Figure 4. Nb after add for train with respect to purchase label.</font>
 </p>
 
 
