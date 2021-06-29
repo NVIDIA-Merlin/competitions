@@ -79,7 +79,7 @@ Figure 2. shows that sessions with purchase or cart-abandonment have the same le
 </p>
 
 
-The table below shows the general statistics for certain features based on the preprocessed session interactions train and validation datasets. 
+The table below shows the general statistics for certain features based on the preprocessed session interactions train and validation datasets. We report the statistics of the original truncated validation set and the resampled one that mimics the test set. First, the distributions of features between Train and Validation set are not different. However, for the three sets, we notice a difference in the distribution of nb_after_add events between classes 0 and 1 where sessions with a purchase events have more interactions after the (AC). Furthermore, the position of the first add-to-cart event in sessions with the purchase event is delayed by one position. Those purchase sessions have also more click events. 
 
  Table 1. Preprocessed session interactions dataset statistics (mean, median, stddev).
 
