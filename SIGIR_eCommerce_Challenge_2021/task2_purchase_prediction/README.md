@@ -79,7 +79,8 @@ Figure 2. shows that sessions with purchase or cart-abandonment have the same le
 </p>
 
 
-The table below shows the general statistics for certain features based on the preprocessed session interactions train and validation datasets. We report the statistics of the original truncated validation sets and the resampled one that mimics the test set. First, the distributions of features between Train and Validation set are not different. However, for the three sets, we notice a difference in the distribution of nb_after_add events between classes 0 and 1 where sessions with a purchase event have more interactions after the (AC). Furthermore, the position of the first add-to-cart event in sessions with the purchase event is delayed by one position. Those purchase sessions have also more click events. 
+The table below shows the general statistics for certain features based on the preprocessed session interactions train and validation datasets. We report the statistics of the original truncated validation sets and the resampled one that mimics the test set. First, the distributions of features between Train and Validation set are not different. However, for the three sets, we notice a difference in the distribution of nb_after_add events between classes 0 and 1 where sessions with a purchase event have more interactions after the (AC). Furthermore, the position of the first add-to-cart event in sessions with the purchase event is delayed by one position. Those purchase sessions have also more click events.  In addition, we can clearly observe that both training and validation sets are imbalanced, meaning there are more negative events than positive ones in our case, which also makes model learning process challenging.
+
 
  Table 1. Preprocessed session interactions dataset statistics (mean, median, stddev).
 
@@ -194,7 +195,7 @@ The feature engineering process generated 98 features. You can see these feature
 
 ## 7. Ensembling the Models
 
-The models we trained and used in the ensemble are XGBoost [1] and DLRM [2]. We applied five primary strategies when ensembling the models. The ensemble results are available in Table 4 at Section 8.3.
+The models we trained and used in the ensemble are XGBoost [1] and DLRM [2]. We applied five primary strategies when ensembling the models. The ensemble results are available in Table 7 in the Section 8.3.
 
 * Majority voting: The predictions with the majority consent from the models. 
 * At least 2 votes: A test data point is labeled with a positive (1) class if at least two models labeled that data point as positive.  
