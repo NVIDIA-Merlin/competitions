@@ -187,6 +187,7 @@ In our experiments we observed that DLRM is prone to overfitting after the 1st e
  <tr><td>dropout_rate</td><td>0.01</td></tr>
  <tr><td>emb_dim</td><td>64</td></tr>
  <tr><td>batch_size</td><td>4096</td></tr>
+ <tr><td>optimizer</td><td>adam</td></tr>
 </tbody></table>
 
 ## 6. Feature selection : Random swapping 
