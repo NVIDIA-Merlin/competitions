@@ -1,0 +1,10 @@
+transformers==4.6.0
+wandb 
+pyyaml
+torch==1.8.1
+git+https://github.com/NVIDIA/dllogger.git
+
+#From code provided SIGIR eCommerce code for submission
+boto3==1.15.8
+python-dotenv==0.13.0
+sklearn

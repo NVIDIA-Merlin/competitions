@@ -1,0 +1,74 @@
+#Current session features
+product_url_hash_list:
+    dtype: categorical
+    cardinality: 508972 #508166
+    is_label: True
+    emb_table: product_id
+    log_with_preds_as_metadata: True
+product_url_hash_list_unfreq:
+    dtype: categorical
+    cardinality: 3 
+    is_label: False
+    emb_table: product_unfreq
+    log_with_preds_as_metadata: True    
+event_type-list:
+    dtype: categorical
+    cardinality: 4
+    emb_table: event_type
+    log_with_preds_as_metadata: True
+# product_action_filled-list:
+#     dtype: categorical
+#     cardinality: 7
+#     emb_table: product_action
+#     log_with_preds_as_metadata: True
+category_hash-list:
+    dtype: categorical
+    cardinality: 174
+    emb_table: category
+    log_with_preds_as_metadata: True
+main_category-list:    
+    dtype: categorical
+    cardinality: 10
+    emb_table: main_category
+    log_with_preds_as_metadata: True    
+price_bucket-list:
+    dtype: categorical
+    cardinality: 11
+    emb_table: price_bucket
+    log_with_preds_as_metadata: True
+has_been_added_to_cart-list:
+    dtype: float  
+    log_with_preds_as_metadata: True
+has_been_detailed-list:
+    dtype: float  
+    log_with_preds_as_metadata: True    
+# has_been_removed_from_cart-list:
+#     dtype: float  
+#     log_with_preds_as_metadata: True
+# has_been_purchased-list:
+#     dtype: float  
+#     log_with_preds_as_metadata: True
+nb_interactions-list:
+    dtype: float  
+    log_with_preds_as_metadata: True
+mean_price_hierarchy-list:
+    dtype: float  
+    log_with_preds_as_metadata: True
+mean_price_main-list:
+    dtype: float  
+    log_with_preds_as_metadata: True
+timestamp_hour_cos-list:
+    dtype: float  
+    log_with_preds_as_metadata: True
+timestamp_hour_sin-list:
+    dtype: float  
+    log_with_preds_as_metadata: True  
+timestamp_wd_sin-list:
+    dtype: float  
+    log_with_preds_as_metadata: True 
+timestamp_wd_cos-list:
+    dtype: float
+    log_with_preds_as_metadata: True
+timestamp_age_days_norm-list:
+    dtype: float    
+    log_with_preds_as_metadata: True

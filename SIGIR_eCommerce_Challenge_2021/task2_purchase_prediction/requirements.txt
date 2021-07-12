@@ -1,0 +1,8 @@
+xgboost==1.4.2
+optuna==2.8.0
+tensorflow==2.5.0
+
+#From code provided SIGIR eCommerce code for submission
+boto3==1.15.8
+python-dotenv==0.13.0
+sklearn

@@ -1,19 +1,14 @@
 # SIGIR 2021 E-Commerce Workshop Data Challenge - Purchase Intent Prediction Task
 
-This online appendix is created as a supplement for our system description paper for 2021 SIGIR eCom Data Challenge submitted to [SIGIR eCom'21](https://sigir-ecom.github.io/index.html). 
+This online appendix is created as a supplement for our system description paper for 2021 SIGIR eCom Data Challenge submitted to [SIGIR eCom'21](https://sigir-ecom.github.io/index.html). That paper describes our solution for Task (1) Session-based recommendation task, while this report focuses only in the Task (2) Purchase Intent Prediction task of that competiton. 
 
 ## 1. Task Description
 
-[Sigir Coveo Data Challenge](https://sigir-ecom.github.io/data-task.html) presented two tasks for the participants: 
-
-1. A recommendation task, where a model is shown k events at the start of a session, and it is asked to predict future product interactions in the same session;
-2. An intent prediction task, where a model is shown a session containing an add-to-cart event, and it is asked to predict whether the item will be bought before the end of the session.
-
-Here, we focus on the second one - Purchase Intent Prediction Task. Our latest submission to LB before Stage 2 submissions were closed resulted in `3.6340530847665` weighted Micro-F1 score, and our best single model submission gave a score of <b>`3.6363084325068`</b> (see Section 8 for details). In the following sections we will describe our data preparation, feature engineering and selection, model building and hypertuning processes. Finally, we conclude our online appendix with a discussion section which gives some insights about model ensembling and prediction analysis.
+Our latest submission to LB before Stage 2 submissions were closed resulted in `3.6340` weighted Micro-F1 score, and our best single model submission gave a score of <b>`3.6363`</b> (see Section 8 for details). In the following sections we will describe our data preparation, feature engineering and selection, model building and hypertuning processes. Finally, we conclude our online appendix with a discussion section which gives some insights about model ensembling and prediction analysis.
 
 ## 2. Data Preparation and Exploration 
 
-Our goal at this step was to create sequential features for user sessions and generate classification label for model training and evaluation. Due to the nature of the Task 2, our final goal is to create a binary classification model which is expected to predict whether the shopper will buy a product X or not in a given session containing an add-to-cart event for this product. 
+Our goal at this step was to create sequential features for user sessions and generate classification label for model training and evaluation. Due to the nature of the Task 2, our final goal is to create a binary classification model which is expected to predict whether the shopper will buy a product or not in a given session containing an add-to-cart event for this product. 
 
 For this data challenge, a session-level dataset, containing 10M product interactions over 57K different products (Section 3) is generated from the four tables `browsing`, `search`, `sku_content` and `intention_test` provided during the competition. Since the provided train set does not include the label column, we first created `is_purchased` label column which consists of binary values: 0 and 1. 
 
@@ -137,7 +132,7 @@ It is worth noting here that we applied target encoding with out-of-the-fold (OO
 
 ## 5. Prediction Models
 
-For our classification models we developed XGBoost [1] and DLRM [2] models. XGBoost (XGB), a scalable tree boosting algorithm, has been widely adapted by data science practitioners for classification tasks and achieved state-of-the-art results on many machine learning challenges over the last couple of years. DLRM [2] is a promising deep-learning model particulary developed for Recommender Systems problems and it makes use of both categorical and numerical inputs.
+For our classification models we developed XGBoost [1] and DLRM [2] models. XGBoost (XGB), a scalable tree boosting algorithm, has been widely adapted by data science practitioners for classification tasks and achieved state-of-the-art results on many machine learning challenges over the last couple of years. DLRM [2] is a deep-learning architecture particulary developed for Recommender Systems problems and it makes use of both categorical and numerical inputs.
 
 ### 5.1. Hyperparameter Tuning
 
