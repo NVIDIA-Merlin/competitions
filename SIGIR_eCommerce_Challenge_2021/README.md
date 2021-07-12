@@ -11,5 +11,5 @@ The [SIGIR eCommerce Workshop Data Challenge 2021](https://sigir-ecom.github.io/
 
 ## Project Organization
 
-- [task1_session_based_rec](task1_session_based_rec/README.md) - Solution for Task (1) Session-based Recommendation: an **ensemble of Transformer archictectures (XLNet and Transformer-XL)** implemented in PyTorch. The solution is described in detail in our [paper](https://sigir-ecom.github.io/) at the SIGIR eCom'21 workshop.
-- [task2_purchase_prediction](task2_purchase_prediction/README.md) - The solution for Task (2) Purchase Intent Prediction consisted in an **ensemble of XGBoost and DLRM** and is described in this [report](task2_purchase_prediction/README.md).
+- [task1_session_based_rec](task1_session_based_rec/) - Solution for Task (1) Session-based Recommendation: an **ensemble of Transformer archictectures (XLNet and Transformer-XL)** implemented in PyTorch. The solution is described in detail in our [paper](https://sigir-ecom.github.io/) at the SIGIR eCom'21 workshop.
+- [task2_purchase_prediction](task2_purchase_prediction/) - The solution and description of our approach for Task (2) Purchase Intent Prediction, whuch consisted in an **ensemble of XGBoost and DLRM**.
