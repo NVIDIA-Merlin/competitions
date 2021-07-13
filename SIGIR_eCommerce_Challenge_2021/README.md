@@ -4,7 +4,7 @@
 
 ## Objective
 This repository holds the **NVIDIA Merlin** solutions for the [SIGIR eCommerce Workshop Data Challenge 2021](https://sigir-ecom.github.io/data-task.html), in which we placed **1st** in the **Subsequent Items Prediction** leaderboard and **2nd** in the **Next Item Prediction** and **Purchase Intent Prediction** leaderboards.
-
+Inl
 ## Competition
 The [SIGIR eCommerce Workshop Data Challenge 2021](https://sigir-ecom.github.io/data-task.html), was organized by a partnership between academic researchers and Coveo company. The competition presented two tasks: (1) session-based recommendation and (2) cart-abandonment. The NVIDIA Merlin team competed for both tasks.
 
@@ -15,5 +15,5 @@ The competition team was composed by [Gabriel Moreira](https://github.com/gabrie
 
 This repo has two folders, one for each task.
 
-- [task1_session_based_rec](task1_session_based_rec/) - **Task (1) Session-based Recommendation** - An ensemble of **Transformer architectures (XLNet and Transformer-XL)** implemented in PyTorch. The solution is described in detail in our [paper](https://sigir-ecom.github.io/) at the SIGIR eCom'21 workshop.
+- [task1_session_based_rec](task1_session_based_rec/) - **Task (1) Session-based Recommendation** - An ensemble of **Transformer architectures (XLNet and Transformer-XL)** implemented in PyTorch. The solution is described in detail in our [paper](https://arxiv.org/abs/2107.05124) at the SIGIR eCom'21 workshop.
 - [task2_purchase_prediction](task2_purchase_prediction/) - **Task (2) Purchase Intent Prediction** - An ensemble of **XGBoost and DLRM**.
