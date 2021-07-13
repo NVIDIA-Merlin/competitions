@@ -4,7 +4,7 @@ This folder contains NVIDIA Merlin team solution for the Task (1) Session-based 
 
 In this task models are evaluated for their ability to predict the *immediate next product* interacted by the user in a session *Mean Reciprocal Rank - MRR* and to predict *all subsequent interacted products* in the session, up to a maximum of 20 after the current event (*F1 score*). 
 
-This repo includes Python code, scripts and instructions on how to run the pre-processing, training, evaluation and prediction pipeline. The solution is described in this our [paper](https://sigir-ecom.github.io/) for SIGIR eCom'21 workshop, including the details of the model architectures, shown in Figure 1.
+This repo includes Python code, scripts and instructions on how to run the pre-processing, training, evaluation and prediction pipeline. The solution is described in this our [paper](https://arxiv.org/pdf/2107.05124.pdf) for SIGIR eCom'21 workshop, including the details of the model architectures, shown in Figure 1.
 
 <p align="center">
   <img src="https://github.com/NVIDIA-Merlin/competitions/blob/main/SIGIR_eCommerce_Challenge_2021/task1_session_based_rec/images/sigir_ecom_architecture.PNG" width="600" />
