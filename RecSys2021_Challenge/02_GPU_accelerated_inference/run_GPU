@@ -1,0 +1,54 @@
+# Copyright 2021 NVIDIA CORPORATION
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+#!/bin/bash
+
+echo "BEGIN" >> log.txt
+date >> log.txt
+
+python common_preprocess_GPU_v1.py >> log.txt
+echo "COMMON PREPROC FINISHED" >> log.txt
+date >> log.txt
+
+python start_GPU_v0.py >> log.txt #Benny
+echo "BENNY STAGE 1 FINISHED" >> log.txt
+date >> log.txt
+
+python bo_GPU_v0.py >> log.txt #Bo
+echo "BO STAGE 1 FINISHED" >> log.txt
+date >> log.txt
+
+python run_nn_v2_GPU_v0_final-2.py >> log.txt #Chris
+echo "CHRIS STAGE 1 NN FINISHED" >> log.txt
+date >> log.txt
+
+python run_xgb_v2_GPU_v0.py >> log.txt #Chris
+echo "CHRIS STAGE 1 XGB FINISHED" >> log.txt
+date >> log.txt
+
+python giba_GPU_v0.py >> log.txt #Giba
+echo "GIBA STAGE 1 FINISHED" >> log.txt
+date >> log.txt
+
+python start_stack_GPU_v0.py >> log.txt #Benny
+echo "BENNY STAGE 2 FINISHED" >> log.txt
+date >> log.txt
+
+python run_stage2_v5_GPU_v0.py >> log.txt #Chris
+echo "CHRIS STAGE 2 FINISHED" >> log.txt
+date >> log.txt
+
+python final-blend_GPU_v0.py >> log.txt
+echo "ENSEMBLE FINISHED" >> log.txt
+date >> log.txt
