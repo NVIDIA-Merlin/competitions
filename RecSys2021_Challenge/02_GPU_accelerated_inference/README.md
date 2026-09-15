@@ -25,7 +25,7 @@ pip uninstall dask
 pip uninstall distributed
 pip install dask[distributed]==2021.4.0
 pip install xgboost
-pip install transfomers
+pip install transformers
 ```
 
 ### Execution
